@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		41166AE323C4263A00AB97FF /* Q32_LongestValidParentheses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41166AE223C4263A00AB97FF /* Q32_LongestValidParentheses.swift */; };
 		4174CED722002AD200348A38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4174CED622002AD200348A38 /* AppDelegate.swift */; };
 		4174CED922002AD200348A38 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4174CED822002AD200348A38 /* ViewController.swift */; };
 		4174CEDC22002AD200348A38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4174CEDA22002AD200348A38 /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		41166AE223C4263A00AB97FF /* Q32_LongestValidParentheses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Q32_LongestValidParentheses.swift; sourceTree = "<group>"; };
 		4174CED322002AD200348A38 /* LeetCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeetCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4174CED622002AD200348A38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4174CED822002AD200348A38 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				4174CED622002AD200348A38 /* AppDelegate.swift */,
+				41166AE223C4263A00AB97FF /* Q32_LongestValidParentheses.swift */,
 				4174CED822002AD200348A38 /* ViewController.swift */,
 				4174CEDA22002AD200348A38 /* Main.storyboard */,
 				4174CEDD22002AD400348A38 /* Assets.xcassets */,
@@ -164,6 +167,7 @@
 				4174CEEB22002B4900348A38 /* Q25.swift in Sources */,
 				4174CED922002AD200348A38 /* ViewController.swift in Sources */,
 				4174CED722002AD200348A38 /* AppDelegate.swift in Sources */,
+				41166AE323C4263A00AB97FF /* Q32_LongestValidParentheses.swift in Sources */,
 				41DE20D72223DB88001D8E36 /* KellyQ2.swift in Sources */,
 				41DE20D32223D8FA001D8E36 /* KellyQ1.swift in Sources */,
 				4174CEEE220061E100348A38 /* Q29.swift in Sources */,
