@@ -9,51 +9,114 @@
 import UIKit
 
 class Q32_LongestValidParentheses: NSObject {
+    
+    /*
+     (
+     ((
+     (() >> 2
+     (()( >> 2
+     (()(( >> 2
+     (()((( >> 2
+     (()(((( >> 2
+     (()(((() >> 2
+     (()(((()) >> 4
+     (()(((())) >> 6
+     (()(((()))) >> 10
+     (()(((())))) >> 12
+
+     2:0
+     1:2
+     1,1:2,0
+     1,4:2,0
+     1,3:2,2
+     1,1:2,6
+     1:10
+     0:12
+     */
+    
+    
     func longestValidParentheses(_ s: String) -> Int {
-        // (((()())()((()()))
-        // (())()()()((((())
         
         var maxLength = 0
-        var resultDic: [Int: (nowPoint: Int, length: Int, readAddLength: Int)] = [:]
+        var numsArray: [Int] = []
+        var totalsArray: [Int] = []
+        let tmpArray = Array(s)
         for idx in 0 ..< s.count {
-            let nowPoint = Array(s)[idx] == "(" ? 1 : -1
-            
-            if nowPoint == -1 {
-                for info in resultDic {
-                    if info.value.nowPoint < 0 {
-                        continue
-                    }
+            if tmpArray[idx] == ")" {
+                guard let right = numsArray.last else {
+                    continue
+                }
+                
+                if right <= 0 {
+                    numsArray = []
+                    totalsArray = []
+                    continue
+                }
+                
+                let newRight = right - 1
+                if newRight == 0, numsArray.count > 1 {
+                    numsArray.removeLast()
+                    let newTotal = totalsArray[totalsArray.count - 2] + totalsArray[totalsArray.count - 1] + 2
+                    totalsArray[totalsArray.count - 2] = newTotal
+                    totalsArray.removeLast()
+                    maxLength = max(newTotal, maxLength)
+                } else {
+                    numsArray[numsArray.count - 1] = newRight
+                    let newTotal = totalsArray[totalsArray.count - 1] + 2
+                    totalsArray[totalsArray.count - 1] = newTotal
                     
-                    let newPoint = info.value.nowPoint + nowPoint
-                    if newPoint < 0 {
-                        resultDic[info.key] = (-1, info.value.length, 0)
-                        continue
-                    } else if newPoint == 0 {
-                        resultDic[info.key] = (newPoint, info.value.length + info.value.readAddLength + 2, 0)
-                        maxLength = max(resultDic[info.key]?.length ?? 0, maxLength)
-                    } else {
-                        resultDic[info.key] = (newPoint, info.value.length, info.value.readAddLength + 2)
-                    }
+                    maxLength = max(newTotal, maxLength)
                 }
             } else {
-                var has1 = false
-                for info in resultDic {
-                    if info.value.nowPoint < 0 {
-                        continue
-                    }
-                    
-                    let newPoint = info.value.nowPoint + nowPoint
-                    resultDic[info.key] = (newPoint, info.value.length, info.value.readAddLength)
-                    if newPoint == 1 {
-                        has1 = true
-                    }
+                if let lastTotal = totalsArray.last, lastTotal == 0 {
+                    numsArray[numsArray.count - 1] = numsArray[numsArray.count - 1] + 1
+                    continue
                 }
-                if has1 == false {
-                    resultDic[idx] = (1, 0, 0)
-                }
+                numsArray.append(1)
+                totalsArray.append(0)
             }
         }
         
         return maxLength
     }
+    
+//    func longestValidParentheses(_ s: String) -> Int {
+//        // (((()())()((()()))
+//        // (())()()()((((())
+//        // (()(((()
+//
+//        var maxLength = 0
+//        var lastResultInfo: (nowPoint: Int, length: Int, readAddLength: Int)?
+//        let tmpArray = Array(s)
+//        for idx in 0 ..< s.count {
+//            let nowPoint = tmpArray[idx] == "(" ? 1 : -1
+//
+//            if nowPoint == -1 {
+//                if let last = lastResultInfo {
+//                    let newPoint = last.nowPoint + nowPoint
+//
+//                    if newPoint < 0 {
+//                        lastResultInfo = nil
+//                    } else if newPoint == 0 {
+//                        lastResultInfo = (newPoint, last.length + last.readAddLength + 2, 0)
+//                        maxLength = max(lastResultInfo!.length, maxLength)
+//                    } else {
+//                        lastResultInfo = (newPoint, last.length, last.readAddLength + 2)
+//                        maxLength = max(lastResultInfo!.readAddLength, maxLength)
+//                    }
+//                }
+//            } else {
+//
+//                if let last = lastResultInfo {
+//                    let newPoint = last.nowPoint + nowPoint
+//
+//                    lastResultInfo = (newPoint, last.length, last.readAddLength)
+//                } else {
+//                    lastResultInfo = (1, 0, 0)
+//                }
+//            }
+//        }
+//
+//        return maxLength
+//    }
 }
