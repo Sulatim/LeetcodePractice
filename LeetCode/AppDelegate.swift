@@ -17,9 +17,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
 
-        let q = Q33_SearchInRotatedSortedArray.init()
-        let ary = [1,3]
-        print("result: \(q.search(ary, 3))")
+        let q = Q36.init()
+        
+        let result = q.isValidSudoku([
+          ["8","3",".",".","7",".",".",".","."],
+          ["6",".",".","1","9","5",".",".","."],
+          [".","9","8",".",".",".",".","6","."],
+          ["8",".",".",".","6",".",".",".","3"],
+          ["4",".",".","8",".","3",".",".","1"],
+          ["7",".",".",".","2",".",".",".","6"],
+          [".","6",".",".",".",".","2","8","."],
+          [".",".",".","4","1","9",".",".","5"],
+          [".",".",".",".","8",".",".","7","9"]
+        ])
+        
+        print("result: \(result)")
         
         return true
     }

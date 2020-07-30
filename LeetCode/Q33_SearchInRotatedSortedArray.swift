@@ -24,68 +24,92 @@ class Q33_SearchInRotatedSortedArray: NSObject {
         if nums.count == 0 {
             return -1
         }
-        return bSearch(nums: nums, target: target, lIndex: 0, rIndex: nums.count - 1)
+        
+        return search(nums, target, lIndex: 0, rIndex: nums.count - 1)
     }
     
-    func bSearch(nums: [Int], target: Int, lIndex: Int, rIndex: Int) -> Int {
-        let mIndex = (lIndex + rIndex) / 2
-        if mIndex <= nums.count {
+    // 先切一半 - m
+    // 再一半 - 比如右邊，可能大可能小
+    //
+    /*
+     f m l, target；l < f
+     m < l or f > m: m~l是連續
+        t > m -> 很好，m~l bsearch
+        t < m -> 重複上頭
+     m > l or f < m: 表示f~m是個連續段
+        t > m -> 重複
+        t < m -> 很好 f~m bsearch
+     */
+    
+    func search(_ nums: [Int], _ target: Int, lIndex: Int, rIndex: Int) -> Int {
+        
+        if nums.count == 0 {
             return -1
         }
-        let midNum = nums[mIndex]
         
-        if lIndex == mIndex {
-            if midNum == target {
-                return lIndex
+        if nums.count == 1 {
+            if target != nums[0] {
+                return -1
             }
+            
+            return 0
+        }
+        
+        if rIndex - lIndex < 0 || lIndex < 0 || nums.count <= rIndex {
             return -1
         }
         
-        if midNum == target {
-            return mIndex
+        let first = nums[lIndex]
+        let last = nums[rIndex]
+        
+        let midIndex = (lIndex + rIndex) / 2
+        let mid = nums[midIndex]
+        
+        if mid == target {
+            return midIndex
+        } else if first == target {
+            return lIndex
+        } else if last == target {
+            return rIndex
         }
         
-        if midNum < target {
-            let rightNum = nums[rIndex]
-            if rightNum > midNum {
-                // target = 5
-                //[12,0,2,4,6,8,10]
-                if rightNum > target {
-                    return bSearch(nums: nums, target: target, lIndex: mIndex, rIndex: rIndex)
-                } else if rightNum == target {
-                    return rIndex
-                } else {
-                    let leftNum = nums[lIndex]
-                    if rightNum < leftNum {
-                        return bSearch(nums: nums, target: target, lIndex: lIndex, rIndex: mIndex - 1)
-                    }
-                    return -1
-                }
+        func top() -> Int {
+            return search(nums, target, lIndex: midIndex + 1, rIndex: rIndex - 1)
+        }
+        
+        func bottom() -> Int {
+            return search(nums, target, lIndex: lIndex + 1, rIndex: midIndex - 1)
+        }
+        
+        if last > first {
+            // bSearch
+            if mid < target {
+                return top()
             } else {
-                // target = 9
-                //[2,4,6,8,10,12,0]
-                return bSearch(nums: nums, target: target, lIndex: mIndex, rIndex: rIndex)
-            }
-        } else {
-            let leftNum = nums[lIndex]
-            // target = 0
-            if leftNum < midNum {
-                //[4,5,6,7,0,1,2]
-                if leftNum < target {
-                    return bSearch(nums: nums, target: target, lIndex: lIndex, rIndex: mIndex)
-                } else if leftNum == target {
-                    return lIndex
-                } else {
-                    let rightNum = nums[rIndex]
-                    if rightNum < leftNum {
-                        return bSearch(nums: nums, target: target, lIndex: mIndex + 1, rIndex: rIndex)
-                    }
-                    return -1
-                }
-            } else {
-                //[12,0,2,4,6,8,10]
-                return bSearch(nums: nums, target: target, lIndex: lIndex, rIndex: mIndex)
+                return bottom()
             }
         }
+        
+        if target > mid {
+            if mid < last {
+                if target < last {
+                    return top()
+                }
+                
+                return bottom()
+            }
+            
+            return top()
+        }
+        
+        if mid > first {
+            if target > first {
+                return bottom()
+            }
+            
+            return top()
+        }
+        
+        return bottom()
     }
 }

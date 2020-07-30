@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		410A7B4824D17BA6008FE58F /* Q36.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410A7B4724D17BA6008FE58F /* Q36.swift */; };
 		41166AE323C4263A00AB97FF /* Q32_LongestValidParentheses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41166AE223C4263A00AB97FF /* Q32_LongestValidParentheses.swift */; };
 		41166AEA23C7064700AB97FF /* Q33_SearchInRotatedSortedArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41166AE923C7064700AB97FF /* Q33_SearchInRotatedSortedArray.swift */; };
 		4174CED722002AD200348A38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4174CED622002AD200348A38 /* AppDelegate.swift */; };
@@ -22,9 +23,12 @@
 		41DE20D72223DB88001D8E36 /* KellyQ2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DE20D62223DB88001D8E36 /* KellyQ2.swift */; };
 		41DE20D92223DB9D001D8E36 /* ManyChildNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DE20D82223DB9D001D8E36 /* ManyChildNode.swift */; };
 		41E8EF4B223BADB100A9A6B6 /* Q30.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E8EF4A223BADB100A9A6B6 /* Q30.swift */; };
+		41FCC3262473D80100512F97 /* Q34.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FCC3252473D80100512F97 /* Q34.swift */; };
+		41FCC3282473E55600512F97 /* Q35.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FCC3272473E55600512F97 /* Q35.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		410A7B4724D17BA6008FE58F /* Q36.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Q36.swift; sourceTree = "<group>"; };
 		41166AE223C4263A00AB97FF /* Q32_LongestValidParentheses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Q32_LongestValidParentheses.swift; sourceTree = "<group>"; };
 		41166AE923C7064700AB97FF /* Q33_SearchInRotatedSortedArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Q33_SearchInRotatedSortedArray.swift; sourceTree = "<group>"; };
 		4174CED322002AD200348A38 /* LeetCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeetCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -42,6 +46,8 @@
 		41DE20D62223DB88001D8E36 /* KellyQ2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KellyQ2.swift; sourceTree = "<group>"; };
 		41DE20D82223DB9D001D8E36 /* ManyChildNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManyChildNode.swift; sourceTree = "<group>"; };
 		41E8EF4A223BADB100A9A6B6 /* Q30.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Q30.swift; sourceTree = "<group>"; };
+		41FCC3252473D80100512F97 /* Q34.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Q34.swift; sourceTree = "<group>"; };
+		41FCC3272473E55600512F97 /* Q35.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Q35.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +94,9 @@
 				41E8EF4A223BADB100A9A6B6 /* Q30.swift */,
 				41166AE223C4263A00AB97FF /* Q32_LongestValidParentheses.swift */,
 				41166AE923C7064700AB97FF /* Q33_SearchInRotatedSortedArray.swift */,
+				41FCC3252473D80100512F97 /* Q34.swift */,
+				41FCC3272473E55600512F97 /* Q35.swift */,
+				410A7B4724D17BA6008FE58F /* Q36.swift */,
 				41DE20D22223D8FA001D8E36 /* KellyQ1.swift */,
 				41DE20D62223DB88001D8E36 /* KellyQ2.swift */,
 			);
@@ -172,7 +181,10 @@
 				4174CED722002AD200348A38 /* AppDelegate.swift in Sources */,
 				41166AEA23C7064700AB97FF /* Q33_SearchInRotatedSortedArray.swift in Sources */,
 				41166AE323C4263A00AB97FF /* Q32_LongestValidParentheses.swift in Sources */,
+				41FCC3262473D80100512F97 /* Q34.swift in Sources */,
+				410A7B4824D17BA6008FE58F /* Q36.swift in Sources */,
 				41DE20D72223DB88001D8E36 /* KellyQ2.swift in Sources */,
+				41FCC3282473E55600512F97 /* Q35.swift in Sources */,
 				41DE20D32223D8FA001D8E36 /* KellyQ1.swift in Sources */,
 				4174CEEE220061E100348A38 /* Q29.swift in Sources */,
 				41E8EF4B223BADB100A9A6B6 /* Q30.swift in Sources */,
