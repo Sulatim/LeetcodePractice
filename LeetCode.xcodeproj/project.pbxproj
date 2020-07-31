@@ -18,6 +18,7 @@
 		4174CEE922002B0400348A38 /* ListNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4174CEE822002B0400348A38 /* ListNode.swift */; };
 		4174CEEB22002B4900348A38 /* Q25.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4174CEEA22002B4900348A38 /* Q25.swift */; };
 		4174CEEE220061E100348A38 /* Q29.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4174CEED220061E100348A38 /* Q29.swift */; };
+		41CE8BCD24D425C100E12480 /* Q37.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CE8BCC24D425C100E12480 /* Q37.swift */; };
 		41DE20D32223D8FA001D8E36 /* KellyQ1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DE20D22223D8FA001D8E36 /* KellyQ1.swift */; };
 		41DE20D52223D993001D8E36 /* TreeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DE20D42223D993001D8E36 /* TreeNode.swift */; };
 		41DE20D72223DB88001D8E36 /* KellyQ2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DE20D62223DB88001D8E36 /* KellyQ2.swift */; };
@@ -41,6 +42,7 @@
 		4174CEE822002B0400348A38 /* ListNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListNode.swift; sourceTree = "<group>"; };
 		4174CEEA22002B4900348A38 /* Q25.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Q25.swift; sourceTree = "<group>"; };
 		4174CEED220061E100348A38 /* Q29.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Q29.swift; sourceTree = "<group>"; };
+		41CE8BCC24D425C100E12480 /* Q37.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Q37.swift; sourceTree = "<group>"; };
 		41DE20D22223D8FA001D8E36 /* KellyQ1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KellyQ1.swift; sourceTree = "<group>"; };
 		41DE20D42223D993001D8E36 /* TreeNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeNode.swift; sourceTree = "<group>"; };
 		41DE20D62223DB88001D8E36 /* KellyQ2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KellyQ2.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 				41FCC3252473D80100512F97 /* Q34.swift */,
 				41FCC3272473E55600512F97 /* Q35.swift */,
 				410A7B4724D17BA6008FE58F /* Q36.swift */,
+				41CE8BCC24D425C100E12480 /* Q37.swift */,
 				41DE20D22223D8FA001D8E36 /* KellyQ1.swift */,
 				41DE20D62223DB88001D8E36 /* KellyQ2.swift */,
 			);
@@ -189,6 +192,7 @@
 				4174CEEE220061E100348A38 /* Q29.swift in Sources */,
 				41E8EF4B223BADB100A9A6B6 /* Q30.swift in Sources */,
 				4174CEE922002B0400348A38 /* ListNode.swift in Sources */,
+				41CE8BCD24D425C100E12480 /* Q37.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
